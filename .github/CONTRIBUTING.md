@@ -79,7 +79,7 @@ The default test script will do the following: lint with ESLint -> type check wi
 
   - `build/alias.js`: module import aliases used across all source code and tests.
 
-  - `build/config.js`: contains the build configurations for all files found in `dist/`. Check this file if you want to find out the entry source file for a dist file.
+  - `build/config.js`: 包含在`dist /`中找到的所有文件的构建配置。 如果要查找dist文件的条目源文件，请检查此文件。
 
 - **`dist`**: contains built files for distribution. Note this directory is only updated when a release happens; they do not reflect the latest changes in development branches.
 

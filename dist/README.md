@@ -1,4 +1,4 @@
-## Explanation of Build Files
+## 构建文件的说明
 
 | | UMD | CommonJS | ES Module |
 | --- | --- | --- | --- |
@@ -7,27 +7,27 @@
 | **Full (production)** | vue.min.js | | |
 | **Runtime-only (production)** | vue.runtime.min.js | | |
 
-### Terms
+### 条款
 
-- **Full**: builds that contains both the compiler and the runtime.
+- ** Full **：包含编译器和运行时的构建。
 
-- **Compiler**: code that is responsible for compiling template strings into JavaScript render functions.
+- **Compiler**：负责将模板字符串编译为JavaScript呈现函数的代码。
 
-- **Runtime**: code that is responsible for creating Vue instances, rendering and patching virtual DOM, etc. Basically everything minus the compiler.
+- **runtime**：负责创建Vue实例，渲染和修补虚拟DOM等的代码。基本上所有东西都减去了编译器。
 
-- **[UMD](https://github.com/umdjs/umd)**: UMD builds can be used directly in the browser via a `<script>` tag. The default file from Unpkg CDN at [https://unpkg.com/vue](https://unpkg.com/vue) is the Runtime + Compiler UMD build (`vue.js`).
+- **[UMD]（https://github.com/umdjs/umd）**：UMD版本可以通过`<script>'标签直接在浏览器中使用。 来自[https://unpkg.com/vue](https://unpkg.com/vue）的Unpkg CDN的默认文件是Runtime + Compiler UMD版本（`vue.js`）。
 
-- **[CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1)**: CommonJS builds are intended for use with older bundlers like [browserify](http://browserify.org/) or [webpack 1](https://webpack.github.io). The default file for these bundlers (`pkg.main`) is the Runtime only CommonJS build (`vue.runtime.common.js`).
+- **[CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1)**:CommonJS版本适用于较旧的捆绑包，如[browserify]（http://browserify.org/）或[webpack 1]（https://webpack.github.io）。 这些bundlers（`pkg.main`）的默认文件是Runtime only CommonJS build（`vue.runtime.common.js`）。
 
-- **[ES Module](http://exploringjs.com/es6/ch_modules.html)**: ES module builds are intended for use with modern bundlers like [webpack 2](https://webpack.js.org) or [rollup](http://rollupjs.org/). The default file for these bundlers (`pkg.module`) is the Runtime only ES Module build (`vue.runtime.esm.js`).
+- **[ES Module]（http://exploringjs.com/es6/ch_modules.html)**:ES模块版本适用于现代捆绑商，如[webpack 2]（https://webpack.js.org）或[rollup]（http：//rollupjs.org/）。 这些捆绑包的默认文件（`pkg.module`）是仅运行时ES模块版本（`vue.runtime.esm.js`）。
 
 ### Runtime + Compiler vs. Runtime-only
 
-If you need to compile templates on the fly (e.g. passing a string to the `template` option, or mounting to an element using its in-DOM HTML as the template), you will need the compiler and thus the full build.
+如果您需要动态编译模板（例如，将字符串传递给`template`选项，或使用其in-DOM HTML作为模板安装到元素），则需要编译器，因此需要完整构建。
 
-When using `vue-loader` or `vueify`, templates inside `*.vue` files are compiled into JavaScript at build time. You don't really need the compiler in the final bundle, and can therefore use the runtime-only build.
+当使用`vue-loader`或`vueify`时，`* .vue`文件中的模板在构建时被编译成JavaScript。 您并不需要最终包中的编译器，因此可以使用仅运行时构建。
 
-Since the runtime-only builds are roughly 30% lighter-weight than their full-build counterparts, you should use it whenever you can. If you wish to use the full build instead, you need to configure an alias in your bundler.
+由于仅运行时构建的重量比其完整构建版本重量轻约30％，因此您应该尽可能地使用它。 如果您希望改为使用完整版本，则需要在捆绑器中配置别名。
 
 #### Webpack
 

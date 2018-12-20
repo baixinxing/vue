@@ -1,10 +1,10 @@
-## Git Commit Message Convention
+## Git提交消息约定
 
-> This is adapted from [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/convention.md).
+> 这改编自[Angular的提交惯例]（https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/convention.md）。
 
-#### Examples
+#### 例子
 
-Appears under "Features" header, `compiler` subheader:
+出现在“Features”标题下，`compiler`子标题：
 
 ```
 feat(compiler): add 'comments' option
